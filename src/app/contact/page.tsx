@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { Mail, Clock, ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Clock, ArrowRight, Github, Linkedin, Globe } from "lucide-react";
 import Link from "next/link";
 
 const formSchema = z.object({
@@ -105,17 +105,17 @@ export default function ContactPage() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-semibold">Connect with me</h3>
                         <div className="flex gap-4">
-                            <Link href="https://github.com" target="_blank" className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors">
+                            <Link href="https://github.com/gasreceipt" target="_blank" className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors">
                                 <Github className="h-5 w-5" />
                                 <span className="sr-only">GitHub</span>
                             </Link>
-                            <Link href="https://linkedin.com" target="_blank" className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors">
+                            <Link href="https://linkedin.com/in/mxwick" target="_blank" className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors">
                                 <Linkedin className="h-5 w-5" />
                                 <span className="sr-only">LinkedIn</span>
                             </Link>
-                            <Link href="https://twitter.com" target="_blank" className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors">
-                                <Twitter className="h-5 w-5" />
-                                <span className="sr-only">Twitter</span>
+                            <Link href="https://maxwell.ltd" target="_blank" className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors">
+                                <Globe className="h-5 w-5" />
+                                <span className="sr-only">Portfolio</span>
                             </Link>
                         </div>
                     </div>

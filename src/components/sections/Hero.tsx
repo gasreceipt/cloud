@@ -36,7 +36,7 @@ export function Hero() {
                 </motion.div>
 
                 <motion.div
-                    className="space-x-4 pt-4"
+                    className="flex flex-col sm:flex-row gap-4 pt-4"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
