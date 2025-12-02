@@ -11,6 +11,7 @@ import {
     SheetTrigger,
     SheetTitle,
 } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const navItems = [
     { name: "Home", href: "/" },
@@ -30,29 +31,28 @@ export function Header() {
                     </Link>
                 </div>
 
-                {/* Desktop Nav */}
-                <div className="hidden md:flex md:items-center md:space-x-6 text-sm font-medium">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className="transition-colors hover:text-foreground/80 text-foreground/60"
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-                </div>
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center gap-6">
+                    <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
+                        About
+                    </Link>
+                    <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
+                        Contact
+                    </Link>
+                    <ModeToggle />
+                </nav>
 
-                {/* Mobile Nav */}
-                <div className="md:hidden">
+                {/* Mobile Navigation */}
+                <div className="md:hidden flex items-center gap-4">
+                    <ModeToggle />
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <Button
                                 variant="ghost"
-                                className="px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
+                                size="icon"
                             >
                                 <Menu className="h-6 w-6" />
-                                <span className="sr-only">Toggle Menu</span>
+                                <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right" className="pr-0">
